@@ -1,17 +1,33 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
-import { GlobalStyle} from './styled.js';
-import Userlists from './components/UserLists'
+import { GlobalStyle,MailList,MailContainer} from './styled.js';
+import UserItem from './components/UserItem'
 import './app.css';
+import {mailList}  from './context/test.json';
+import MailContent from './components/MailContent'
 
 
 
 function App(){
+  const [selectIndex,setSelectIndex] = useState(0);
   return(
     <>
         <GlobalStyle />
-      <Userlists>
-      </Userlists>
+    <MailContainer>
+      <MailList>
+        {mailList.map((mailContent,index)=>
+            <UserItem 
+              nameProfileContent = {mailContent}
+              index={index}
+              key={index}
+              setSelectIndex={setSelectIndex}
+              isActive={index===selectIndex}
+            />
+        )}
+      </MailList>
+      <MailContent Content = {mailList[selectIndex]} >
+     </MailContent>
+    </MailContainer>
     </>
   )
 }

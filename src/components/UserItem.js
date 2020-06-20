@@ -1,11 +1,10 @@
 import React,{useEffect,useState} from 'react';
 import {UserProfile,UserName, UserItem} from '../styled';
-import {mailList} from '../context/test.json';
 
-function Useritem({index,onClick,isClicked}){
+function Useritem({nameProfileContent,index,setSelectIndex,isActive}){
     const {
         profile,
-        name} = mailList[index];
+        name} = nameProfileContent;
 
 
     
@@ -14,12 +13,18 @@ function Useritem({index,onClick,isClicked}){
         console.log('렌더링');
     })
 
+    const onClick=()=>{
+        setSelectIndex(index);
+
+    }
 
     return( 
-        <UserItem  onClick={onClick} isClicked={isClicked} >
+   <>
+        <UserItem  onClick={onClick} isActive={isActive} >
             <UserProfile image={profile}></UserProfile>
             <UserName>{name}</UserName>
         </UserItem>
+    </>
     );
 }
 

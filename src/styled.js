@@ -13,6 +13,18 @@ export const UserProfile =styled.div`
     background-size: cover;
 
 `
+export const MailList = styled.div`
+height: 1000px;
+background-color: #373B5F;
+width: 300px;
+
+
+`
+export const MailContainer = styled.div`
+  display: flex;
+  
+`
+
 export const GlobalStyle = createGlobalStyle`
 body{
   padding: 0px;
@@ -33,18 +45,17 @@ export const UserItem = styled.div`
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  ${props=>props.isClicked  && css`
+  
+  width: 300px;
+  ${props=>props.isActive  && css`
     background-color: red;
   `}
-  
+  `;
 
-`;
+  export const mailContent = styled.div`
+    display: flex;
+    
+  `
 
-
-export const UserLists = styled.div`
-display: flex;
-flex-direction: column;
-width: 300px;
-`
 
 
