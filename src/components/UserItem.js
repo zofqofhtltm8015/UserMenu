@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useEffect,useState,useCallback} from 'react';
 import {UserProfile,UserName, UserItem} from '../styled';
 
 function Useritem({nameProfileContent,index,setSelectIndex,isActive}){
@@ -13,10 +13,10 @@ function Useritem({nameProfileContent,index,setSelectIndex,isActive}){
         console.log('렌더링');
     })
 
-    const onClick=()=>{
+    const onClick= useCallback(()=>{
         setSelectIndex(index);
 
-    }
+    },[])
 
     return( 
    <>

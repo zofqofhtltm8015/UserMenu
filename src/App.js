@@ -25,7 +25,7 @@ function App(){
             />
         )}
       </MailList>
-      <MailContent Content = {mailList[selectIndex]}>
+      <MailContent contentValue = {mailList[selectIndex]}>
      </MailContent>
     </MailContainer>
     </>
