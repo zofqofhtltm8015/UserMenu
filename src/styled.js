@@ -25,6 +25,15 @@ export const MailContainer = styled.div`
   
 `
 
+export const MailProfile = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+`
+
 export const GlobalStyle = createGlobalStyle`
 body{
   padding: 0px;
@@ -47,14 +56,14 @@ export const UserItem = styled.div`
   cursor: pointer;
   
   width: 300px;
-  ${props=>props.isActive  && css`
-    background-color: red;
-  `}
+    ${props=>props.isActive  && css`
+      background-color: red;
+    `}
   `;
 
-  export const mailContent = styled.div`
-    display: flex;
-    
+  export const MailContent = styled.div`
+  display: flex;
+
   `
 
 
