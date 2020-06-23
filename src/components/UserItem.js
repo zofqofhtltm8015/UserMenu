@@ -15,7 +15,6 @@ function Useritem({nameProfileContent,index,setSelectIndex,isActive}){
 
     const onClick= useCallback(()=>{
         setSelectIndex(index);
-
     },[])
 
     return( 

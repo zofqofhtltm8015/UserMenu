@@ -9,7 +9,7 @@ export const UserProfile =styled.div`
 
     border-radius: 30px;
 
-    background-image: url('${props=>props.image}');
+    background-image: url('${({image})=>image}');
     background-size: cover;
 `
 export const MailContainer = styled.div`

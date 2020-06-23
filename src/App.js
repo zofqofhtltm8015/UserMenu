@@ -6,8 +6,6 @@ import './app.css';
 import {mailList}  from './context/test.json';
 import MailContent from './components/MailContent'
 
-
-
 function App(){
   const [selectIndex,setSelectIndex] = useState(0);
   return(
@@ -15,7 +13,7 @@ function App(){
         <GlobalStyle />
     <MailContainer>
       <MailList>
-        {mailList.map((mailContent,index)=>
+        {mailList.map((mailContent,index)=> 
             <UserItem 
               nameProfileContent = {mailContent}
               index={index}
