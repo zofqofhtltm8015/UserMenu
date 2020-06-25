@@ -1,11 +1,12 @@
 import React from 'react';
+import io from 'socket.io-client';
 
-function ChattingRoom(){
+function ChattingRoom({}){
     return(
-        <div>
-            Hello React!
-        </div>
+        <>
+
+
+        </>
     );
-}
 
 export default ChattingRoom;
